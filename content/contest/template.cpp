@@ -1,23 +1,44 @@
 #include <bits/stdc++.h>
-using namespace std;
 
-#define rep(i, a, b) for(int i = a; i < (b); ++i)
-#define all(x) begin(x), end(x)
-#define sz(x) (int)(x).size()
-#define trav(u, x) for (auto &u : x)
-typedef long long ll;
-typedef pair<int, int> pii;
-typedef vector<int> vi;
-template<class A,class B>auto&operator<<(ostream&o,pair<A,B>p){return o<<'('<<p.first<<", "<<p.second<<')';}
-template<class T>auto operator<<(ostream&o,T x)->decltype(x.end(),o){o<<'{';int i=0;for(auto e:x)o<<(", ")+2*!i++<<e;return o<<'}';}
-#ifdef DEBUG
-#define debug(x...) cerr<<"["#x"]: ",[](auto...$){((cerr<<$<<"; "),...);}(x),cerr<<'\n'
-#else
-#define debug(...) {}
+#pragma GCC target("avx2")
+#pragma GCC optimization("Ofast")
+#pragma GCC optimization("unroll-loops")
+ 
+#define mp make_pair
+#define pb push_back
+#define ppb pop_back
+#define pf push_front
+#define ppf pop_front
+#define eb emplace_back
+#define st first
+#define nd second
+#define vt vector
+#define VAR(__var)  #__var << ": " << __var << " "
+#define PAIR(__var) #__var << ": " << __var.first << ", " << __var.second << " "
+#define FOR(__var, __start, __end)  for(int __var=__start; __var<__end; ++__var)
+#define FORB(__var, __start, __end) for(int __var=__start; __var>__end; --__var)
+#define maxi(__x, __y) __x = (__x>__y?__x:__y)
+#define mini(__x, __y) __x = (__x<__y?__x:__y)
+#define all(__var)     (__var).begin(),(__var).end()
+#define rall(__var)    (__var).rbegin(),(__var).rend()
+#define sz(__var)      (int)(__var).size()
+ 
+#ifndef DEBUG
+#define DEBUG 0
 #endif
+#define debug if(DEBUG)
+ 
+using namespace std;
+ 
+// ordered set
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template <typename T>
+using ord_set = tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
 
+int32_t main() {
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-int main() {
-	cin.tie(0)->sync_with_stdio(0);
-	cin.exceptions(cin.failbit);
+	return 0;
 }

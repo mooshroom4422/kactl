@@ -1,0 +1,1 @@
+g++ -Wall -Wextra -Wunused -Wshadow -std=c++17 -g -O2 -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -fno-sanitize-recover -fstack-protector -fsanitize=address -fsanitize=undefined
