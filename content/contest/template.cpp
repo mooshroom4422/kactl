@@ -1,34 +1,24 @@
 #include <bits/stdc++.h>
+using namespace std;
 
-#pragma GCC target("avx2")
-#pragma GCC optimization("Ofast")
-#pragma GCC optimization("unroll-loops")
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native")
  
 #define mp make_pair
 #define pb push_back
-#define ppb pop_back
-#define pf push_front
-#define ppf pop_front
-#define eb emplace_back
 #define st first
 #define nd second
+#define fi first
+#define se second
 #define vt vector
-#define VAR(__var)  #__var << ": " << __var << " "
-#define PAIR(__var) #__var << ": " << __var.first << ", " << __var.second << " "
-#define FOR(__var, __start, __end)  for(int __var=__start; __var<__end; ++__var)
-#define FORB(__var, __start, __end) for(int __var=__start; __var>__end; --__var)
-#define maxi(__x, __y) __x = (__x>__y?__x:__y)
-#define mini(__x, __y) __x = (__x<__y?__x:__y)
-#define all(__var)     (__var).begin(),(__var).end()
-#define rall(__var)    (__var).rbegin(),(__var).rend()
-#define sz(__var)      (int)(__var).size()
- 
-#ifndef DEBUG
-#define DEBUG 0
-#endif
-#define debug if(DEBUG)
- 
-using namespace std;
+#define FOR(a, b, c)  for(int a=b; a<c; ++a)
+#define all(a)     (a).begin(),(a).end()
+#define sz(a)      (int)(a).size()
+
+typedef       long long ll;
+typedef     long double ld;
+typedef   pair<ll, ll> pll;
+typedef pair<int, int> pii;
  
 // ordered set
 #include <ext/pb_ds/assoc_container.hpp>
@@ -42,3 +32,27 @@ int32_t main() {
 
 	return 0;
 }
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+
