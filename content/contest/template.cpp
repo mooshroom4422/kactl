@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize("O3,unroll-loops")
-#pragma GCC target("avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native")
- 
 #define mp make_pair
 #define pb push_back
 #define st first
@@ -15,44 +12,27 @@ using namespace std;
 #define all(a)     (a).begin(),(a).end()
 #define sz(a)      (int)(a).size()
 
-typedef       long long ll;
-typedef     long double ld;
-typedef   pair<ll, ll> pll;
+typedef long long ll;
+typedef long double ld;
+typedef pair<ll, ll> pll;
 typedef pair<int, int> pii;
- 
-// ordered set
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-template <typename T>
-using ord_set = tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
+typedef vector<int> vi; 
+typedef vector<ll> vll;
+typedef pii PII;
+typedef pll PLL;
+
+constexpr ll nax = 2e5+6969, INF = 1e9+2137;
+constexpr ld eps = 1e-9;
+
+mt19937_64 rng(6969);
+// mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
+
+inline ll rand(ll l, ll r) {
+	return uniform_int_distribution<ll>(l, r)(rng);
+}
 
 int32_t main() {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
+	
 	return 0;
 }
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-
