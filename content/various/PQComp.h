@@ -7,7 +7,6 @@
  */
 #pragma once
 
-#define F {...; ++i;}
 auto cmp = [&](const pll &l, const pll &r) {
 	return lhs > rhs;
 };
