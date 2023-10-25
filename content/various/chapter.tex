@@ -35,7 +35,11 @@
 			\item \lstinline{#pragma GCC optimize ("Ofast")} will make GCC auto-vectorize loops and optimizes floating points better.
 			\item \lstinline{#pragma GCC target ("avx2")} can double performance of vectorized code, but causes crashes on old machines.
 			\item \lstinline{#pragma GCC optimize ("trapv")} kills the program on integer overflows (but is really slow).
+			\item \lstinline{#pragma GCC target("avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native")} dopychanie kolanem + 03 i unroll
 		\end{itemize}
 	\kactlimport{FastMod.h}
 	\kactlimport{FastInput.h}
+	\kactlimport{PQComp.h}
+	\kactlimport{CustomHash.h}
+	\kactlimport{RandomTree.h}
 % \kactlimport{Unrolling.h}
