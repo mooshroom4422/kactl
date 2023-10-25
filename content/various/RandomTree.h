@@ -4,7 +4,7 @@
  * License: CC0
  * Source: me
  * Description: 
- * Usage: auto edges = rand_tree(n); // n -> number of vertices
+ * Usage: auto edges = random_tree(n); // n -> number of vertices
  * Time: O(n)
  */
 #pragma once
