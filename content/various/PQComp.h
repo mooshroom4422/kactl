@@ -7,7 +7,7 @@
  */
 #pragma once
 
-auto cmp = [&](const pll &l, const pll &r) {
+auto cmp = [](const pll &l, const pll &r) {
 	return l > r;
 };
 priority_queue<pll, vt<pll>, decltype(cmp)> q(cmp);
