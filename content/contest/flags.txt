@@ -1,4 +1,3 @@
-g++ -Wall -Wextra -Wshadow -Wconversion -pedantic -std=c++17 -g -Og -fno-sanitize-recover -fstack-protector -fsanitize=address,undefined
-// -D_GLIBCXX_DEBUG
+db() { g++ -Wall -Wextra -Wshadow -Wconversion -pedantic -std=c++17 -g -Og -fno-sanitize-recover -fstack-protector -fsanitize=address,undefined -D_GLIBCXX_DEBUG "$1".cpp -o "$@" }
 
 //
