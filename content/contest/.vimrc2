@@ -1,0 +1,6 @@
+set sw=4 ts=4 is nu ru mouse=a ai
+sy on
+inoremap { {}<Left>
+inoremap{<CR> {<CR>}<ESC>O<TAB>
+inoremap {{ {
+inoremap {} {}
