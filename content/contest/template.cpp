@@ -16,13 +16,16 @@ typedef long long ll;
 typedef long double ld;
 typedef pair<ll, ll> pll;
 typedef pair<int, int> pii;
-typedef vector<int> vi; 
-typedef vector<ll> vll;
 typedef pii PII;
 typedef pll PLL;
+typedef vector<int> vi; 
+typedef vector<ll> vll;
 
 constexpr ll nax = 2e5+6969, INF = 1e9+2137;
 constexpr ld eps = 1e-9;
+
+#define dbg(x) cerr << setw(4) << __LINE__ << ": [" #x "]: " << x << endl;
+#define vdbg(x) cerr << setw(4) << __LINE__ << ": [" #x "]: "; for(auto &a : x) cout << a << ", "; cout << '\n';
 
 mt19937_64 rng(6969);
 // mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());
