@@ -24,8 +24,27 @@ typedef vector<ll> vll;
 constexpr ll nax = 2e5+6969, INF = 1e9+2137;
 constexpr ld eps = 1e-9;
 
-#define dbg(x) cerr << setw(4) << __LINE__ << ": [" #x "]: " << x << endl;
-#define vdbg(x) cerr << setw(4) << __LINE__ << ": [" #x "]: "; for(auto &a : x) cout << a << ", "; cout << '\n';
+#ifdef DEBUG
+template<typename Stream, typename T1, typename T2>
+Stream& operator << (Stream& out, pair<T1, T2> a) {return out << "(" << a.st << ", " << a.nd << ")";}
+ 
+template<typename Stream, typename T>
+requires ranges::range<T>
+Stream &operator << (Stream& out, T v) {
+	out << "{";
+	int i = 0;
+	for (auto x : v)
+		out << x << ((++ i) != sz(v) ? ", " : "");
+	return out << "}";
+}
+ 
+template<typename... Args>
+void dump(Args... x) {((cerr << x << ", "), ...) << '\n';}
+ 
+#define debug(x...) cerr << setw(4) << __LINE__ << ": [" #x "]: ", dump(x)
+#else
+#define debug(...) 0
+#endif
 
 mt19937_64 rng(6969);
 // mt19937_64 rng(chrono::system_clock::now().time_since_epoch().count());

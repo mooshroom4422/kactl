@@ -10,36 +10,37 @@
 
 #include "euclid.h"
 
-ll safe_mod(ll x, ll m) {
-	ll t = x%m;
-	return t >= 0 ? t : t + m;
-}
-
+template<ll mod>
 struct mint {
-	static const ll mod = 17; // change to something else
 	ll x;
-	mint(ll xx) : x(safe_mod(xx, mod)) {}
-	mint operator+(mint b) { return mint((x + b.x) % mod); }
-	mint operator-(mint b) { return mint((x - b.x + mod) % mod); }
-	mint operator*(mint b) { return mint((x * b.x) % mod); }
-	mint operator/(mint b) { return *this * invert(b); }
-	mint invert(mint a) {
-		ll x, y, g = euclid(a.x, mod, x, y);
-		assert(g == 1); return mint((x + mod) % mod);
+	mint() : x(0) {}
+	mint(ll x) : x(x) {}
+
+	mint& operator+=(mint const& v) { x += v.x; if(x >= mod) x -= mod; return *this; }
+	mint& operator-=(mint const& v) { x -= v.x; if(x < 0) x += mod; return *this; }
+	mint& operator*=(mint const& v) { x = (x*v.x)%mod; return *this; }
+	mint& operator/=(mint const& v) { return *this *= v.inv(); }
+	friend mint operator+(mint const& l, mint const& r) { return mint(l) += r; }
+	friend mint operator-(mint const& l, mint const& r) { return mint(l) -= r; }
+	friend mint operator*(mint const& l, mint const& r) { return mint(l) *= r; }
+	friend mint operator/(mint const& l, mint const& r) { return mint(l) /= r; }
+	friend bool operator<(mint const& l, mint const& r) { return l.x < r.x; }
+	friend bool operator==(mint const& l, mint const& r) { return l.x == r.x; }
+	friend bool operator!=(mint const& l, mint const& r) { return l.x != r.x; }
+	mint inv() const { return bpow(x, mod-2); }
+
+	static mint bpow(mint a, ll b) {
+		mint res = 1;
+		while(b > 0) {
+			if(b&1)
+				res = res*a;
+			a = a*a;
+			b >>= 1;
+		}
+		return res;
 	}
 
-	/**
-	 * Author: Noam527
-	 * Date: 2019-04-24
-	 * License: CC0
-	 * Source: folklore
-	 * Description:
-	 * Status: tested
-	 */
-	mint operator^(ll e) {
-		ll ans = 1, b = x;
-		for (; e; b = b * b % mod, e /= 2)
-		if (e & 1) ans = ans * b % mod;
-		return ans;
+	friend ostream& operator<<(ostream& out, const mint& v) {
+		return out << "mint{" << v.x << ", " << mod << "}";
 	}
 };
