@@ -1,6 +1,12 @@
+/**
+ * Author: Wiktor Cupiał
+ * Date: 2025
+ * License: N/A
+ * Description: template
+ * Source: for the debug macro see: https://github.com/KacperTopolski/kactl/
+ */
 #include <bits/stdc++.h>
 using namespace std;
-
 #define mp make_pair
 #define pb push_back
 #define st first
@@ -25,22 +31,10 @@ constexpr ll nax = 2e5+6969, INF = 1e9+2137;
 constexpr ld eps = 1e-9;
 
 #ifdef DEBUG
-template<typename Stream, typename T1, typename T2>
-Stream& operator << (Stream& out, pair<T1, T2> a) {return out << "(" << a.st << ", " << a.nd << ")";}
- 
-template<typename Stream, typename T>
-requires ranges::range<T>
-Stream &operator << (Stream& out, T v) {
-	out << "{";
-	int i = 0;
-	for (auto x : v)
-		out << x << ((++ i) != sz(v) ? ", " : "");
-	return out << "}";
-}
- 
-template<typename... Args>
-void dump(Args... x) {((cerr << x << ", "), ...) << '\n';}
- 
+#define DTP(x, y) auto operator << (auto &o, auto a) -> decltype(y, o) { o << "{"; x; return o << "}"; }
+DTP(o << a.st << ", " << a.nd, a.nd);
+DTP(int j=0; for(auto i : a) o << i << ((++j) != sz(a) ? ", " : ""), all(a));
+void dump(auto... x) { (( cerr << x << ", " ), ...) << '\n'; }
 #define debug(x...) cerr << setw(4) << __LINE__ << ": [" #x "]: ", dump(x)
 #else
 #define debug(...) 0

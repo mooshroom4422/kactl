@@ -1,4 +1,4 @@
-set cin ai is ts=4 sw=4 nu
+set cin ai is ts=4 sw=4 nu mouse=a
 sy on
 " Select region and then type :Hash to hash your selection.
 " Useful for verifying that there aren't mistypes.

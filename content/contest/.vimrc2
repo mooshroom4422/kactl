@@ -1,4 +1,4 @@
-set sw=4 ts=4 is nu ru mouse=a ai
+set cin ai is ts=4 sw=4 nu ru mouse=a
 sy on
 inoremap { {}<Left>
 inoremap{<CR> {<CR>}<ESC>O<TAB>
