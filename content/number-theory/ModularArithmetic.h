@@ -15,7 +15,6 @@ struct mint {
 	ll x;
 	mint() : x(0) {}
 	mint(ll x) : x(x) {}
-
 	mint& operator+=(mint const& v) { x += v.x; if(x >= mod) x -= mod; return *this; }
 	mint& operator-=(mint const& v) { x -= v.x; if(x < 0) x += mod; return *this; }
 	mint& operator*=(mint const& v) { x = (x*v.x)%mod; return *this; }
@@ -28,7 +27,6 @@ struct mint {
 	friend bool operator==(mint const& l, mint const& r) { return l.x == r.x; }
 	friend bool operator!=(mint const& l, mint const& r) { return l.x != r.x; }
 	mint inv() const { return bpow(x, mod-2); }
-
 	static mint bpow(mint a, ll b) {
 		mint res = 1;
 		while(b > 0) {
@@ -39,8 +37,10 @@ struct mint {
 		}
 		return res;
 	}
-
 	friend ostream& operator<<(ostream& out, const mint& v) {
 		return out << "mint{" << v.x << ", " << mod << "}";
 	}
+};
+template<ll mod> struct hash<mint<mod>> {
+	size_t operator()(const mint<mod>& v) const { return v.x; }
 };
