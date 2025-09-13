@@ -1,6 +1,7 @@
-set cin ai is ts=4 sw=4 nu ru mouse=a
+set cin ai is ts=4 sw=4 nu rnu mouse=a
 sy on
 inoremap { {}<Left>
-inoremap{<CR> {<CR>}<ESC>O<TAB>
+inoremap{<CR> {<CR>}<ESC>O
 inoremap {{ {
 inoremap {} {}
+" setxkbmap -option caps:escape
